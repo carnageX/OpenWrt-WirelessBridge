@@ -130,9 +130,6 @@ Restart the network and wireless services to apply the changes:
 
 ---
 
-By following these steps, you can easily switch the host wireless network on your OpenWRT router. Let me know if you need further assistance!
----
-
 ## **2. OpenVPN Configuration**
 
 ### **Objective**
@@ -250,8 +247,8 @@ Go to **Network** -→ **Firewall**, click on the Edit button of the `lan` zone.
 
 
 
-### **3. Troubleshooting
-#### **3.1. DNS Resolution Issues
+### **3. Troubleshooting**
+#### **3.1. DNS Resolution Issues**
 Symptoms: VPN connects but DNS queries fail.
 
 Solution:
@@ -278,7 +275,7 @@ esac
 exit 0
 ```
 
-#### ** 3.2. Route Conflicts
+#### **3.2. Route Conflicts**
 Symptoms: Two default routes exist, causing intermittent connectivity.
 
 Solution:
@@ -297,7 +294,7 @@ Verify the routes:
 ip route show
 ```
 
-#### ** 3.3. Firewall Issues
+#### **3.3. Firewall Issues**
 Symptoms: Traffic is blocked after the VPN connection is established.
 
 Solution:
@@ -315,7 +312,7 @@ Restart the firewall:
 ```bash
 /etc/init.d/firewall restart
 ```
-#### **3.4. TLS Handshake Errors
+#### **3.4. TLS Handshake Errors**
 Symptoms: VPN connection fails with TLS handshake errors.
 
 Solution:
@@ -326,7 +323,7 @@ ping <vpn-server-ip>
 ```
 Verify the .ovpn file is correctly configured and does not conflict with the server’s pushed options.
 
-### **4. Final Notes
+### **4. Final Notes**
 Ensure the router has a stable internet connection before configuring the VPN.
 
 Use static IP addresses for the VPN server to avoid DNS resolution issues.
